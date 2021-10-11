@@ -1,6 +1,6 @@
 import json
 
-infile = open('US_fires_9_1.json', 'r')
+infile = open('US_fires_9_14.json', 'r')
 
 
 fires = json.load(infile)
@@ -35,8 +35,8 @@ data = [{'type':'scattergeo',
  }
 }
 ]
-#data = [Scattergeo(lon = long, lat = lat)]
 
-my_layout = Layout(title = "Fires greater than 450 from 9/1/20-9/13/20")
+
+my_layout = Layout(title = "Fires greater than 450 from 9/14/20-9/20/20")
 fig = {'data':data, 'layout': my_layout}
-offline.plot(fig, filename = "firebrightness9.1.html" )
+offline.plot(fig, filename = "firebrightness9.14.html" )
